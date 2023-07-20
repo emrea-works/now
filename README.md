@@ -25,3 +25,11 @@ Get with miliseconds seperated by underscores
 etc... You can see the other options by `now --help`
 
 Happy getting of now in a format you wish instantly!
+
+---
+
+*A quick tip:* if you have `xclip` installed in your OS then you can get the date directly to clipboard by
+
+`now | xclip -sel clip`
+
+
