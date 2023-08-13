@@ -32,4 +32,8 @@ Happy getting of now in a format you wish instantly!
 
 `now | xclip -sel clip`
 
+Or simply
+
+`now -c`
+
 
