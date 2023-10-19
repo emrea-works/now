@@ -5,11 +5,12 @@ case $1 in
 	--help )
 		echo "Usage: now [PARAMETER]"
 		echo "  --help          shows this dialog then exits."
-		echo "  -f | --full     full string, e.g. 20230423091532"
-		echo "  -d | --dash     dash seperator, e.g. 2023-04-23-09-15"
-		echo "  -D | --detailed full, underscore seperator, e.g. 2023_04_23_09_15_32"
-		echo "  -u | --unix     unix timestamp."
-		echo "  -c | --clip     full, dash seperator then saves in clipboard."
+		echo "  -f, --full     full string, e.g. 20230423091532"
+		echo "  -d, --dash     dash seperator, e.g. 2023-04-23-09-15"
+		echo "  -D, --detailed full, underscore seperator, e.g. 2023_04_23_09_15_32"
+		echo "  -u, --unix     unix timestamp."
+		echo "  -t, --today    show today only, dashed."
+		echo "  -c, --clip     full, dash seperator then saves in clipboard."
 		;;
 	-f | --full )
 		date +%Y%m%d%H%M%S
@@ -22,6 +23,9 @@ case $1 in
 		;;
 	-u | --unix )
 		date +%s
+		;; 
+	-t | --today )
+		date +%Y-%m-%d
 		;; 
 	-c | --clip )
 	  date +%Y-%m-%d-%H-%M | xclip -sel clip
